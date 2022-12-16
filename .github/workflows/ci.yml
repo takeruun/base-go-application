@@ -57,6 +57,7 @@ jobs:
           DB_PASSWORD: password
           DB_HOST: 127.0.0.1
           DB_NAME: base-go-application
+          SECRET_HASH_KEY: SECRET_HASH_KEY
         run: |
           go run db/create_database.go
           sql-migrate up -env="test"
